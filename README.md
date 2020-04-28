@@ -1,5 +1,5 @@
 # projet-google
-Description du projet de recréation de la page d'acceuil de Google un test ici
+Description du projet de recréation de la page d'acceuil de Google
 
 ## But
 Recréer la page d'acceuil de Google en n'utilisant que du HTML et du CSS. Utiliser Git pour stocker votre projet. Faites évoluer votre projet en faisant des commits de façon régulière.
