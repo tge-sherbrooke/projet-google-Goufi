@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+	<link href="styles/style.css" rel="stylesheet">
+    <title>Google</title>
+  </head>
+  <style>
+	#upleft {
+		position: absolute;
+		margin: 13px 0 0 2px;
+		}
+	#upleft a {
+		color: #000;
+		padding-left: 15px;
+		font-family: arial,sans-serif;
+		opacity: 0.75;
+		text-decoration: none;
+		font-size: 13px;
+		}
+	#upleft a:hover {
+		text-decoration: underline;
+	}
+	#centre {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	#logo {
+		height: 115px;
+		padding-top: 130px;
+		width: 350px;
+	}
+	#searchbar {
+		height: 40px;
+		width: 482px;
+		margin-top: 15px;
+		border-radius: 24px;
+		box-shadow: none;
+		border: 1px solid #dfe1e5;
+	}
+	#boutons {
+		display: flex;
+		height: 200px;
+		justify-content: center;
+	}
+	#recherche {
+		border: 1px solid #f2f2f2;
+		border-radius: 4px;
+		color: #5F6368;
+		font-family: arial,sans-serif;
+		font-size: 14px;
+		padding: 0 16px;
+		cursor: pointer;
+		margin-top: 35px;
+		height: 36px;
+		margin-right: 10px;
+		margin-left: 15px;
+		min-width: 54px;
+	}
+	#chance {
+		border: 1px solid #f2f2f2;
+		border-radius: 4px;
+		color: #5F6368;
+		font-family: arial,sans-serif;
+		font-size: 14px;
+		padding: 0 16px;
+		cursor: pointer;
+		margin-top: 35px;
+		height: 36px;
+		margin-right: 20px;
+		min-width: 54px;
+	}
+  </style>
+  <body>
+	<div id="upleft">
+		<a href=#>À propos</a>
+		<a href=#>Google Store</a>
+	</div>
+	<div id="centre">
+		<div>
+			<img src="images\logo-google.PNG" alt="Logo google" id="logo">
+		</div>
+		<div>
+			<input type="text" id="searchbar">
+		</div>
+	</div>
+	<div id="boutons">
+		<div><button type="submit" id="recherche">Recherche Google</button></div>
+		<div><button type="submit" id="chance">J'ai de la chance</button></div>
+	</div>
+  </body>
+</html>
