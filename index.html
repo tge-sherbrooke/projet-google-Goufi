@@ -6,6 +6,10 @@
     <title>Google</title>
   </head>
   <style>
+	#header {
+		height: 45px;
+		position: relative;
+	}
 	#upleft {
 		position: absolute;
 		margin: 13px 0 0 2px;
@@ -18,8 +22,15 @@
 		text-decoration: none;
 		font-size: 13px;
 		}
-	#upleft a:hover {
+	#header a:hover {
 		text-decoration: underline;
+	}
+	#upright .gmimages:hover {
+		color: black;
+		opacity: 0.75;
+	}
+	#upright #carreaux:hover {
+		opacity: 1;
 	}
 	#centre {
 		display: flex;
@@ -28,20 +39,38 @@
 	}
 	#logo {
 		height: 115px;
-		padding-top: 130px;
+		padding-top: 100px;
 		width: 350px;
 	}
-	#searchbar {
+	#labarre {
+		display: flex;
 		height: 40px;
-		width: 482px;
+		width: 582px;
 		margin-top: 15px;
 		border-radius: 24px;
 		box-shadow: none;
 		border: 1px solid #dfe1e5;
+		outline: none;
+	}
+	#searchbar {
+		height: 35px;
+		outline: none;
+		border: 0px;
+		min-width: 400px;
+		font-size: 16px;
+	}
+	input:focus {
+		outline-offset: -2px;
+	}
+	#loupe {
+		height: 20px;
+		margin-top: 10px;
+		margin-left: 10px;
+		margin-right: 10px;
 	}
 	#boutons {
 		display: flex;
-		height: 200px;
+		height: 85px;
 		justify-content: center;
 	}
 	#recherche {
@@ -58,6 +87,9 @@
 		margin-left: 15px;
 		min-width: 54px;
 	}
+	#recherche:hover {
+		border: 1px solid #c6c6c6;
+	}
 	#chance {
 		border: 1px solid #f2f2f2;
 		border-radius: 4px;
@@ -71,23 +103,141 @@
 		margin-right: 20px;
 		min-width: 54px;
 	}
+	#chance:hover {
+		border: 1px solid #c6c6c6;
+	}
+	#fuji {
+		display: flex;
+		flex-direction: column;
+		height: 100px;
+		align-items: center;
+		line-height: 28px;
+		text-align: center;
+	}
+	#fuji a:hover {
+		text-decoration: underline;
+	}
+	#lienfuji {
+		color: #1a0dab;
+		font-family: arial,sans-serif;
+		font-size: small;
+	}
+	#english {
+		color: #1a0dab;
+		font-family: arial,sans-serif;
+		font-size: small;
+		text-decoration: none;
+	}
+	p {
+		display: inline-block;
+		line-height: 28px;
+		font-size: small;
+		font-family: arial,sans-serif;
+		margin-top: 20px;
+	}
+	#labarre:hover {
+		box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
+		border-color: rgba(223,225,229,0);
+	}
+	#upright {
+		display: flex;
+		float: right;
+		margin: 13px 2px 0 0;
+		padding-right: 15px;
+	}
+	#upright a {
+		color: black;
+		padding-left: 15px;
+		font-family: arial,sans-serif;
+		opacity: 1;
+		text-decoration: none;
+		font-size: 13px;
+	}
+	#carreaux {
+		height: 20px;
+		padding-left: 0px;
+		margin-top: -1px;
+		opacity: 0.75;
+	}
+	#footer {
+		display: grid;
+		grid-template-rows: 40px 40px;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		background: #f2f2f2;
+		color: black;
+		line-height: 40px;
+		min-width: 980px;
+		font-size: 14px;
+		font-family: arial,sans-serif;
+	}
+	#footer a {
+		text-decoration: none;
+	}
+	#footer a:hover {
+		text-decoration: underline;
+	}
+	#foothaut {
+		margin-left: 25px;
+		opacity: 0.50;
+	}
+	#footbas {
+		border-top: 1px solid #e4e4e4;
+		opacity: 0.75;
+	}
+	.lienfootg {
+		color: black;
+		margin-left: 27px;
+	}
+	.lienfootd {
+		color: black;
+		float: right;
+		margin-right: 27px;
+	}
   </style>
   <body>
-	<div id="upleft">
-		<a href=#>À propos</a>
-		<a href=#>Google Store</a>
+	<div id="header">
+		<div id="upleft">
+			<a href=#>À propos</a>
+			<a href=#>Google Store</a>
+		</div>
+		<div id="upright">
+			<a href=# class="gmimages">Gmail</a>
+			<a href=# class="gmimages">Images</a>
+			<a href=#><img src="images\carres.png" alt="" id="carreaux"></a>
+		</div>
 	</div>
 	<div id="centre">
 		<div>
 			<img src="images\logo-google.PNG" alt="Logo google" id="logo">
 		</div>
-		<div>
-			<input type="text" id="searchbar">
-		</div>
+		<label>
+			<div id="labarre">
+				<div><img src="images\loupe.PNG" alt="" id="loupe"></div>
+				<input type="text" id="searchbar">
+			</div>
+		</label>
 	</div>
 	<div id="boutons">
 		<div><button type="submit" id="recherche">Recherche Google</button></div>
 		<div><button type="submit" id="chance">J'ai de la chance</button></div>
 	</div>
+	<div id="fuji">
+		<div><a ref=# id="lienfuji">Du Grand Canyon au mont. Fuji, voyagez à travers le monde depuis chez vous</a></div>
+		<div><p>Google disponible en : <a href=# id="english">English</a></p></div>
+	</div>
   </body>
+  <footer id="footer">
+		<div id="foothaut">Canada</div>
+		<div id="footbas">
+			<a href=# class="lienfootg">Publicité<a>
+			<a href=# class="lienfootg">Entreprise<a>
+			<a href=# class="lienfootg">Comment fonctionne la recherche Google ?<a>
+			<a href=# class="lienfootd">Paramètres</a>
+			<a href=# class="lienfootd">Conditions d'utilisation<a>
+			<a href=# class="lienfootd">Confidentialité<a>
+		</div>
+  </footer>
 </html>
